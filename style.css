@@ -1,0 +1,43 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+}
+.topnav{
+    padding: 8px;
+    box-shadow: 0 0 2px 3px rgba(73, 77, 78, 0.1) ;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+.nav-links {
+    padding: 12px;
+    display: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    justify-items: end;
+    padding: 4px 10px;
+}
+.nav-links a:hover {
+    border-bottom: 2px solid #e48452;
+    color: coral;
+    transition: color 0.3s;
+}
+.openbutton {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+/*Media for Topnav*/
+@media screen and (min-width: 800px) {
+    .openbutton {
+        display: none;
+    }
+    .nav-links {
+        display: inline-block;
+    }
+}
