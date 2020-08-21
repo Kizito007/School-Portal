@@ -7,22 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <title>Homepage</title>
 </head>
 <body>
-    <!--Topnav Start-->
-    <div class="topnav">                                                      <!--Container for the whole thing-->
-        <div class="topnav-links">
-            <a href="#" class="openbutton">&#9776;</a>
-            <a href="#"><img src="img/LOGO-removebg-preview.png" alt="" width="240" height="35"></a>
-        </div>
-        <div class="nav-links">
-            <a href="#">HOME</a>
-            <a href="#">SCHOOL PORTAL</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">CONTACT</a>
-            <a href="#">NEWS</a>
+    <!--Sidenav start-->
+    <div class="sidenav" id="sidenav">
+        <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">&times;</a>
+        <div class="sidenav-links">
+            <a href="">HOME</a> <br>
+            <a href="">SCHOOL PORTAL</a> <br>
+            <a href="">ABOUT US</a> <br>
+            <a href="">CONTACT</a><br>
+            <a href="">NEWS</a>
         </div>
     </div>
+    <!--MAIN BODY-->
+    <div class="main" id="main">
+            <!--Topnav Start-->
+        <div class="topnav"> 
+            <div class="topnav-links">
+                <a href="javascript:void(0)" class="openbutton" id="openbutton" onclick="openNav()">&#9776;</a>
+                <a href="#"><img src="img/LOGO-removebg-preview.png" alt="" width="240" height="32"></a>
+            </div>
+            <div class="nav-links">
+                <a href="#">HOME</a>
+                <a href="#">SCHOOL PORTAL</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT</a>
+                <a href="#">NEWS</a>
+            </div>
+        </div>
+        <!--TopNav end-->
+
+        <!--SLIDESHOW AREA-->
+        <div class="hero-image">
+            <div class="hero-text">
+            <h1 >EXAMPLE GROUP OF SCHOOLS</h1>
+            <p>Whatever we do is an example</p>
+            <button>VISIT SCHOOL PORTAL</button>
+            </div>
+        </div>
+
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
