@@ -1,37 +1,53 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.main {
+    margin-left: 0;
+    transition: 0.5s;
+    opacity: 1;
 }
 .topnav{
-    padding: 8px;
-    box-shadow: 0 0 2px 3px rgba(73, 77, 78, 0.1) ;
-    background-color: rgb(15, 15, 15);
+    padding: 5px;
+    background-color: rgb(18, 18, 18);
     display: flex;
     justify-content: space-between;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
 }
 .nav-links {
-    padding: 12px;
+    padding: 8px;
     display: none;
 }
 .nav-links a {
     text-decoration: none;
+    font-size: 16px;
     color: white;
     justify-items: end;
-    padding: 4px 10px;
+    padding: 10px 10px;
 }
 .nav-links a:hover {
     border-bottom: 2px solid #e48452;
-    color: coral;
-    transition: color 0.3s;
+    color: #e48452;
+    transition: color 0.2s;
 }
 .openbutton {
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
+
 /*Media for Topnav*/
 @media screen and (min-width: 800px) {
     .openbutton {
@@ -40,4 +56,210 @@ body {
     .nav-links {
         display: inline-block;
     }
+}
+
+/*SIDENAV START*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 3;
+    background-color: rgb(18, 18, 18);
+    transition:width 0.3s;
+}
+.sidenav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+}
+.sidenav-links a:hover {
+    color: #e48452;
+}
+.closebutton {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    left: 80%;
+    cursor: pointer;
+}
+/*=====================================================================================
+                            HEADER
+=======================================================================================*/
+.hero-image{
+    box-sizing: border-box;
+    height: 95vh;
+    width: 100%;
+    margin: auto;
+    background-image: url(img/slideshow/school-slideshow-1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: 0.1s;
+    overflow: hidden;
+
+    animation-name: slideshow;
+    animation-direction: normal;
+    animation-duration: 24s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: step-start;
+}
+
+@keyframes slideshow {
+    0%{background-image: url(img/slideshow/school-slideshow-1.jpeg);}
+    25%{background-image: url(img/slideshow/cdc-GDokEYnOfnE-unsplash.jpg);}
+    50%{background-image: url(img/slideshow/cdc-gsRi9cWCIB0-unsplash.jpg);}
+    75%{background-image: url(img/slideshow/cdc-UqTrGSohyCs-unsplash.jpg);}
+    100%{background-image: url(img/slideshow/neonbrand-zFSo6bnZJTw-unsplash.jpg);}
+}
+@-webkit-keyframes slideshow {
+    0%{background-image: url(img/slideshow/school-slideshow-1.jpeg);}
+    25%{background-image: url(img/slideshow/cdc-GDokEYnOfnE-unsplash.jpg);}
+    50%{background-image: url(img/slideshow/cdc-gsRi9cWCIB0-unsplash.jpg);}
+    75%{background-image: url(img/slideshow/cdc-UqTrGSohyCs-unsplash.jpg);}
+    100%{background-image: url(img/slideshow/neonbrand-zFSo6bnZJTw-unsplash.jpg);}
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    color: white;
+}
+.hero-text p {
+    font-size: 2rem;
+    color:white;
+}
+.hero-text button {
+    border: none;
+    outline: none;
+    padding: 8px 24px;
+    font-size: 1rem;
+    background-color: #e48452;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative
+}
+.hero-text button:hover {
+    background-color: white;
+    color: #e48452;
+    box-shadow: 0px 0px 2px #fff;
+}
+/*WELCOME SECTION*/
+.profile-card {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+    max-width: 340px;
+    height: fit-content;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+.profile-card-text {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #3a3a3a;
+}
+.profile-card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(18, 18, 18);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+.profile-card button:hover {
+    background-color: #3a3a3a;
+}
+
+.welcome {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    width: 99%;
+    margin: auto;
+    justify-content: space-between;
+}
+.welcome-text {
+    width: 70%;
+    text-align: justify;
+    padding: 2px;
+}
+.welcome-text p {
+    font-size: 16px;
+}
+@media screen and (max-width: 1160px) {
+    .welcome {
+        display: block;
+    }
+    .welcome-text {
+        width: 96%;
+        margin: auto;
+    }
+    .profile-card{
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+/*========================================================
+                        FOOTER
+==========================================================*/
+footer {
+    background-color: rgb(18, 18, 18);
+    height: fit-content;
+    min-height: 200px;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.05rem;
+    margin: 28px 36px;
+    transition: color .2s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #e48452;
+}
+.footer-logos {
+    text-align: center;
+}
+svg {
+    padding: 2px;
+    margin: 26px;
+    width: 28px;
+    height: 26px;
+    fill: white;
+}
+svg:hover {
+    fill: #e48452;
 }
